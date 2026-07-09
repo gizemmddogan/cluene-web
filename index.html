@@ -58,7 +58,7 @@
         /* Hero Section */
         header {
             text-align: center;
-            padding: 4rem 1rem;
+            padding: 4rem 1rem 2rem 1rem;
             max-width: 800px;
             margin: 0 auto;
         }
@@ -94,19 +94,20 @@
             box-shadow: 0 10px 20px rgba(45, 212, 191, 0.2);
         }
 
-        /* Mockup Area */
-        .mockup-container {
-            position: relative;
-            max-width: 320px;
-            margin: 4rem auto;
-            border: 8px solid #1E293B;
-            border-radius: 40px;
-            box-shadow: 0 50px 100px rgba(0,0,0,0.5);
-            overflow: hidden;
+        /* Banner Tasarımı (Yatay 1024x500 için) */
+        .banner-wrapper {
+            max-width: 1024px;
+            margin: 2rem auto 4rem auto;
+            padding: 0 1rem;
         }
 
-        .mockup-container img {
+        .hero-banner {
             width: 100%;
+            height: 500px;
+            object-fit: cover; /* Görselin bozulmasını engeller */
+            border-radius: 24px;
+            box-shadow: 0 30px 60px rgba(0,0,0,0.5);
+            border: 1px solid rgba(177, 198, 228, 0.1);
             display: block;
         }
 
@@ -157,8 +158,10 @@
 
         footer a { color: var(--accent); text-decoration: none; margin: 0 10px; }
 
+        /* Mobil Uyumluluk */
         @media (max-width: 768px) {
             h1 { font-size: 3rem; }
+            .hero-banner { height: auto; } /* Mobilde görsel ezilmesin diye yükseklik serbest */
         }
     </style>
 </head>
@@ -173,14 +176,13 @@
         <h1>Günlük Zihin Ritüeli</h1>
         <p class="subtitle">Tahmin etme, çıkarım yap. Her gün tek bir sayı, her ipucu seni gerçeğe bir adım daha yaklaştırır.</p>
         <div id="indir">
-            <!-- App Store / Play Store linklerini buraya ekleyebilirsin -->
             <a href="#" class="cta-button">Hemen Ücretsiz İndir</a>
         </div>
     </header>
 
-    <div class="mockup-container">
-        <!-- Buraya senin 1. ekran görüntünü "phone.png" adıyla koyman lazım -->
-        <img src="https://via.placeholder.com/600x1200/0F172A/2DD4BF?text=Cluene+App" alt="Cluene App Screenshot">
+    <!-- Yeni Banner Alanı -->
+    <div class="banner-wrapper">
+        <img src="banner.png" alt="Cluene Görsel" class="hero-banner">
     </div>
 
     <section class="features">
